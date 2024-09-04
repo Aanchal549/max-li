@@ -1,0 +1,27 @@
+for i, p in enumerate(p_values):
+    nll_values[i] = -np.sum(bernoulli.logpmf(training_data, p))
+
+plt.figure(figsize=(8,6))
+plt.plot(p_values, nll_values, label='NLL')
+plt.title('Negative log-likelihood for Bernoulli distribution')
+plt.xlabel('p')
+plt.ylabel('Negative log-likelihood')
+plt.show()
+
+if p <= 0 or p >= 1:
+        raise ValueError("p must be in the range (0, 1)")
+
+number = 9
+if is_prime(number):
+    print(f"{number} is a prime")
+else:
+    print(f"{number} is not a prime")         
+
+def is_prime_palindrome(num):
+    return is_palindrome(num) and is_prime(num)
+
+number = 11
+if is_prime_palindrome(number):
+    print(f"{number} is a prime palindrome")
+else:
+    print(f"{number} is not a prime palindrome")       
